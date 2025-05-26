@@ -4,6 +4,8 @@
 
 local Util = require("lazyvim.util")
 
+local map = Util.safe_keymap_set
+
 Util.safe_keymap_set("n", "<C-c>o", function()
   vim.cmd("BufferLineCloseOthers")
 end, { desc = "Close other buffers" })
@@ -15,3 +17,7 @@ end, { desc = "Close right tab" })
 Util.safe_keymap_set("n", "<C-c>l", function()
   vim.cmd("BufferLineCloseLeft")
 end, { desc = "Close left tab" })
+
+map("n", "<leader>h", "<C-W>s", { desc = "Split Window Below", remap = true })
+map("n", "<leader>v", "<C-W>v", { desc = "Split Window Right", remap = true })
+map("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
