@@ -21,9 +21,7 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = function()
-          vim.cmd([[ colorscheme NeoSolarized ]])
-        end,
+        colorscheme = "catppuccin",
       },
     },
     { import = "lazyvim.plugins.extras.lang.typescript" },
@@ -31,6 +29,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.java" },
     { import = "lazyvim.plugins.extras.lang.clangd" },
     { import = "lazyvim.plugins.extras.lang.python" },
+    { import = "lazyvim.plugins.extras.util.gitui" },
     -- import/override with your plugins
     { import = "plugins" },
   },
